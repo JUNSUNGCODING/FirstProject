@@ -1,0 +1,24 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:mem:test
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      data-locations: classpath*:db/h2/data.sql
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 329624602974-ujpls3fc243fugs3hiqnldub8tu19smk.apps.googleusercontent.com
+            clientSecret: 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
